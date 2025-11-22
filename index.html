@@ -1,3 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Dr Erik Behrens – Physical Oceanographer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Personal professional webpage for Dr Erik Behrens – physical oceanographer at Earth Sciences New Zealand." />
+    <style>
+        :root {
+            --bg-dark: #02111b;
+            --bg-deep: #021b2b;
+            --bg-mid: #033e5b;
+            --bg-light: #0a8fb7;
+            --accent: #4fd1c5;
+            --accent-soft: rgba(79, 209, 197, 0.15);
+            --text-main: #f7fafc;
+            --text-muted: #a0aec0;
+            --card-bg: rgba(3, 30, 53, 0.9);
+            --border-soft: rgba(148, 210, 255, 0.25);
+            --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.45);
+            --max-width: 1080px;
+            --radius-xl: 18px;
+            --radius-xxl: 28px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top, #044b7b 0, #02111b 55%, #00050a 100%);
+            color: var(--text-main);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(16px);
+            background: linear-gradient(
+                to bottom,
+                rgba(1, 12, 24, 0.9),
+                rgba(1, 12, 24, 0.45),
+                transparent
+            );
+            border-bottom: 1px solid rgba(116, 185, 255, 0.18);
+        }
+
+        .nav {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0.6rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .logo-circle {
+            width: 32px;
+            height: 32px;
+            border-radius: 999px;
+            background: radial-gradient(circle at 30% 10%, #9ae6ff, #0a8fb7 45%, #02111b 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 18px rgba(99, 179, 237, 0.55);
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .nav-title {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav-title span:first-child {
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            font-size: 0.92rem;
+        }
+
+        .nav-title span:last-child {
+            font-size: 0.76rem;
+            color: var(--text-muted);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            font-size: 0.88rem;
+        }
+
+        .nav-links a {
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -0.25rem;
+            width: 0;
+            height: 2px;
+            border-radius: 999px;
+            background: linear-gradient(to right, #9ae6ff, #4fd1c5);
+            transition: width 0.22s ease-out;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        section {
+            padding: 3.5rem 1.2rem;
+        }
+
+        .shell {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .hero {
+            padding-top: 3rem;
+            padding-bottom: 4.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (max-width: 860px) {
+            .hero-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.15rem 0.7rem;
+            border-radius: 999px;
+            background: radial-gradient(circle at left, rgba(144, 205, 244, 0.35), transparent 70%);
+            border: 1px solid rgba(144, 205, 244, 0.5);
+            font-size: 0.76rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--text-muted);
+            margin-bottom: 0.9rem;
+        }
+
+        .hero-badge-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: #68d391;
+            box-shadow: 0 0 10px #68d391;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.1rem, 3.1vw, 2.8rem);
+            line-height: 1.15;
+            margin-bottom: 0.7rem;
+        }
+
+        .hero h1 span.accent {
+            background: linear-gradient(to right, #90cdf4, #4fd1c5, #f6e05e);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            color: var(--text-muted);
+            max-width: 34rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .hero-subtitle strong {
+            color: #e2f3ff;
+            font-weight: 600;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.9rem;
+            margin-bottom: 1.7rem;
+        }
+
+        .btn {
+            border-radius: 999px;
+            padding: 0.55rem 1.3rem;
+            font-size: 0.92rem;
+            border: 1px solid transparent;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #0a8fb7, #38b2ac);
+            color: #f7fafc;
+            box-shadow: 0 12px 30px rgba(15, 118, 178, 0.55);
+        }
+
+        .btn-primary:hover {
+            filter: brightness(1.07);
+        }
+
+        .btn-ghost {
+            background: rgba(2, 19, 40, 0.7);
+            border-color: rgba(150, 210, 255, 0.5);
+            color: var(--text-main);
+        }
+
+        .btn-ghost:hover {
+            background: rgba(13, 34, 63, 0.9);
+        }
+
+        .hero-meta {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.4rem;
+        }
+
+        .hero-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .hero-meta-badge {
+            padding: 0.18rem 0.55rem;
+            border-radius: 999px;
+            border: 1px solid rgba(129, 230, 217, 0.6);
+            background: rgba(15, 118, 178, 0.1);
+            font-size: 0.78rem;
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-card {
+            border-radius: var(--radius-xxl);
+            background: radial-gradient(circle at top, #063f6b, #02111b 60%);
+            padding: 1.4rem 1.3rem 1.5rem;
+            border: 1px solid rgba(148, 210, 255, 0.42);
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .hero-card-title {
+            font-size: 0.86rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--text-muted);
+        }
+
+        .hero-card-pill {
+            padding: 0.18rem 0.6rem;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            background: rgba(24, 121, 190, 0.7);
+            border: 1px solid rgba(148, 210, 255, 0.7);
+        }
+
+        .ocean-stats {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.9rem;
+            margin-bottom: 1.1rem;
+        }
+
+        .ocean-stat {
+            padding: 0.6rem 0.55rem;
+            border-radius: 14px;
+            background: linear-gradient(145deg, rgba(7, 59, 97, 0.96), rgba(9, 90, 120, 0.8));
+            border: 1px solid rgba(129, 230, 217, 0.4);
+            font-size: 0.76rem;
+        }
+
+        .ocean-stat-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #a0aec0;
+            margin-bottom: 0.25rem;
+        }
+
+        .ocean-stat-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .ocean-stat-caption {
+            font-size: 0.7rem;
+            color: #cbd5f5;
+        }
+
+        .mini-graph {
+            position: relative;
+            height: 80px;
+            border-radius: 14px;
+            background: radial-gradient(circle at top, rgba(144, 205, 244, 0.25), rgba(3, 16, 33, 0.95));
+            border: 1px solid rgba(144, 205, 244, 0.4);
+            overflow: hidden;
+        }
+
+        .mini-graph-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(to right, rgba(148, 210, 255, 0.12) 1px, transparent 1px),
+                linear-gradient(to top, rgba(148, 210, 255, 0.12) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.5;
+        }
+
+        .mini-wave {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 10% 120%, rgba(79, 209, 197, 0.85), transparent 60%),
+                        radial-gradient(circle at 65% -30%, rgba(129, 230, 217, 0.9), transparent 60%),
+                        radial-gradient(circle at 120% 140%, rgba(66, 153, 225, 0.85), transparent 60%);
+            mix-blend-mode: screen;
+            opacity: 0.85;
+        }
+
+        .mini-graph-footer {
+            position: absolute;
+            bottom: 0.3rem;
+            left: 0.6rem;
+            right: 0.6rem;
+            font-size: 0.7rem;
+            display: flex;
+            justify-content: space-between;
+            color: #d1e9ff;
+        }
+
+        .section-heading {
+            margin-bottom: 1.8rem;
+        }
+
+        .section-kicker {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .section-subtitle {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2.3fr);
+            gap: 1.8rem;
+            align-items: flex-start;
+        }
+
+        @media (max-width: 880px) {
+            .about-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        .about-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border-soft);
+            padding: 1.4rem 1.5rem;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .about-text {
+            font-size: 0.94rem;
+            color: #e2e8f0;
+        }
+
+        .about-text p + p {
+            margin-top: 0.8rem;
+        }
+
+        .about-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .about-list li {
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+        }
+
+        .about-list li::before {
+            content: "•";
+            color: var(--accent);
+            margin-right: 0.4rem;
+        }
+
+        .about-tags {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+        }
+
+        .tag {
+            padding: 0.18rem 0.55rem;
+            border-radius: 999px;
+            border: 1px solid rgba(129, 230, 217, 0.7);
+            font-size: 0.75rem;
+            background: rgba(2, 32, 44, 0.65);
+        }
+
+        .about-highlight {
+            background: radial-gradient(circle at top left, rgba(76, 178, 223, 0.35), rgba(2, 17, 33, 0.98));
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(144, 205, 244, 0.65);
+            padding: 1.2rem 1.3rem;
+            box-shadow: var(--shadow-soft);
+            font-size: 0.9rem;
+        }
+
+        .about-highlight h3 {
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .about-highlight p {
+            color: #edf2f7;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.4rem;
+        }
+
+        @media (max-width: 960px) {
+            .cards-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 680px) {
+            .cards-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border-soft);
+            padding: 1.1rem 1.15rem 1.15rem;
+            box-shadow: var(--shadow-soft);
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .card-kicker {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--text-muted);
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .card-body {
+            font-size: 0.88rem;
+            color: #e2e8f0;
+        }
+
+        .card-meta {
+            margin-top: 0.35rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .card-footer {
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        .pub-list {
+            list-style: none;
+            font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .pub-item {
+            border-radius: 12px;
+            border: 1px solid rgba(148, 210, 255, 0.35);
+            background: radial-gradient(circle at left, rgba(79, 209, 197, 0.15), rgba(3, 24, 48, 0.98));
+            padding: 0.7rem 0.85rem;
+        }
+
+        .pub-title {
+            font-weight: 500;
+        }
+
+        .pub-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .contact-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-xxl);
+            border: 1px solid var(--border-soft);
+            padding: 1.6rem 1.6rem 1.5rem;
+            box-shadow: var(--shadow-soft);
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+            gap: 1.7rem;
+            align-items: center;
+        }
+
+        @media (max-width: 820px) {
+            .contact-card {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        .contact-card p {
+            font-size: 0.94rem;
+            color: #e2e8f0;
+        }
+
+        .contact-details {
+            font-size: 0.9rem;
+        }
+
+        .contact-row {
+            margin-bottom: 0.4rem;
+        }
+
+        .contact-row span.label {
+            display: inline-block;
+            width: 70px;
+            color: var(--text-muted);
+            font-size: 0.84rem;
+        }
+
+        footer {
+            border-top: 1px solid rgba(148, 210, 255, 0.18);
+            padding: 1.1rem 1rem 1.5rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .footer-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .footer-links a {
+            font-size: 0.8rem;
+        }
+
+        .wave-divider {
+            position: relative;
+            height: 40px;
+            overflow: hidden;
+        }
+
+        .wave-divider svg {
+            position: absolute;
+            top: -1px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- Header / Nav -->
+    <header>
+        <nav class="nav">
+            <div class="nav-left">
+                <div class="logo-circle">
+                    <span>EB</span>
+                </div>
+                <div class="nav-title">
+                    <span>Dr Erik Behrens</span>
+                    <span>Physical Oceanography · Earth Sciences New Zealand</span>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#publications">Publications</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <main>
+        <section class="hero" id="top">
+            <div class="shell">
+                <div class="hero-grid">
+                    <div>
+                        <div class="hero-badge">
+                            <span class="hero-badge-dot"></span>
+                            <span>Physical Oceanography · Aotearoa New Zealand</span>
+                        </div>
+                        <h1>
+                            Dr Erik Behrens<br />
+                            <span class="accent">Physical Oceanographer</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            I work on the <strong>dynamics of the ocean and climate system</strong>, with a focus on
+                            regional circulation, extreme events, and coastal impacts around Aotearoa New Zealand.
+                            At <strong>Earth Sciences New Zealand (ESNZ)</strong> I combine observations, numerical models,
+                            and data-driven approaches to support <strong>science-based decision making</strong>.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#contact" class="btn btn-primary">
+                                Get in touch
+                                <span>↗</span>
+                            </a>
+                            <a href="#research" class="btn btn-ghost">
+                                View research focus
+                            </a>
+                        </div>
+                        <div class="hero-meta">
+                            <span class="hero-meta-badge">Open to collaboration &amp; co-supervision</span>
+                            <span>🌊 Southern Ocean & NZ region · 🔬 Dynamical modelling · 🤖 ML for marine extremes</span>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="hero-card">
+                            <div class="hero-card-header">
+                                <div class="hero-card-title">Ocean at a Glance</div>
+                                <div class="hero-card-pill">Research Snapshot</div>
+                            </div>
+                            <div class="ocean-stats">
+                                <div class="ocean-stat">
+                                    <div class="ocean-stat-label">Sea level rise</div>
+                                    <div class="ocean-stat-value">+3.6 mm/yr</div>
+                                    <div class="ocean-stat-caption">Long-term global mean trend</div>
+                                </div>
+                                <div class="ocean-stat">
+                                    <div class="ocean-stat-label">Marine heatwaves</div>
+                                    <div class="ocean-stat-value">×3</div>
+                                    <div class="ocean-stat-caption">Increase in frequency since 1980s</div>
+                                </div>
+                                <div class="ocean-stat">
+                                    <div class="ocean-stat-label">Ocean heat</div>
+                                    <div class="ocean-stat-value">&gt;90%</div>
+                                    <div class="ocean-stat-caption">Excess heat stored in the ocean</div>
+                                </div>
+                            </div>
+                            <div class="mini-graph">
+                                <div class="mini-graph-grid"></div>
+                                <div class="mini-wave"></div>
+                                <div class="mini-graph-footer">
+                                    <span>Simulated anomalies</span>
+                                    <span>Temperature · Sea level · Circulation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="wave-divider" aria-hidden="true">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="rgba(10, 143, 183, 0.22)" d="M0,224L48,224C96,224,192,224,288,234.7C384,245,480,267,576,250.7C672,235,768,181,864,176C960,171,1056,213,1152,229.3C1248,245,1344,235,1392,229.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+
+        <!-- About -->
+        <section id="about">
+            <div class="shell">
+                <div class="section-heading">
+                    <div class="section-kicker">Profile</div>
+                    <h2 class="section-title">About me</h2>
+                    <p class="section-subtitle">
+                        Background, current role, and main research themes.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-text">
+                            <p>
+                                I am a <strong>physical oceanographer</strong> working at
+                                <strong>Earth Sciences New Zealand (ESNZ)</strong>, based in Wellington.
+                                My research focuses on how ocean circulation and variability shape climate, sea level,
+                                and marine extremes in the New Zealand region and the wider Southern Ocean.
+                            </p>
+                            <p>
+                                I work with <strong>numerical models</strong> (global and regional),
+                                <strong>observational datasets</strong>, and increasingly <strong>machine learning</strong>
+                                to understand drivers, mechanisms, and predictability of ocean-driven impacts on
+                                ecosystems, coastal assets, and marine sectors.
+                            </p>
+                        </div>
+                        <ul class="about-list">
+                            <li>Current role: Physical Oceanographer, Earth Sciences New Zealand (ESNZ)</li>
+                            <li>Location: Pōneke / Wellington, Aotearoa New Zealand</li>
+                            <li>PhD: Physical Oceanography / Climate (details here if you like)</li>
+                        </ul>
+                        <div class="about-tags">
+                            <span class="tag">Physical oceanography</span>
+                            <span class="tag">Southern Ocean & NZ region</span>
+                            <span class="tag">Marine heatwaves</span>
+                            <span class="tag">Sea level & extremes</span>
+                            <span class="tag">Numerical modelling</span>
+                            <span class="tag">Data science & ML</span>
+                        </div>
+                    </div>
+                    <div class="about-highlight">
+                        <h3>Current focus at ESNZ</h3>
+                        <p>
+                            Selected themes:
+                        </p>
+                        <ul class="about-list" style="margin-top:0.7rem;">
+                            <li>Drivers and predictability of <strong>marine heatwaves</strong> around New Zealand</li>
+                            <li>Regional <strong>sea level change</strong>, extremes, and coastal risk</li>
+                            <li>High-resolution <strong>ocean modelling</strong> for the NZ Exclusive Economic Zone</li>
+                            <li>Coupling process-based models with <strong>data-driven emulators</strong></li>
+                            <li>Co-design of tools with stakeholders across science, policy, and industry</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research / Projects -->
+        <section id="research">
+            <div class="shell">
+                <div class="section-heading">
+                    <div class="section-kicker">Research &amp; Projects</div>
+                    <h2 class="section-title">Selected work</h2>
+                    <p class="section-subtitle">
+                        A sample of projects illustrating my approach to physical oceanography and climate impact assessment.
+                    </p>
+                </div>
+
+                <div class="cards-grid">
+                    <article class="card">
+                        <div class="card-kicker">Marine heatwaves</div>
+                        <h3 class="card-title">Forecasting coastal marine heatwave risk</h3>
+                        <p class="card-body">
+                            Developing high-resolution forecasts and early-warning indicators for marine heatwaves around
+                            Aotearoa New Zealand, integrating regional ocean models, reanalysis products, and
+                            machine-learning based prediction systems co-designed with end users.
+                        </p>
+                        <div class="card-meta">Keywords: seasonal prediction, coastal impacts, aquaculture & fisheries</div>
+                        <div class="card-footer">
+                            <a href="#">Project summary (PDF, coming soon)</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-kicker">Sea level &amp; circulation</div>
+                        <h3 class="card-title">Regional sea level change and Southern Ocean dynamics</h3>
+                        <p class="card-body">
+                            Quantifying how large-scale circulation, wind forcing, and ocean heat content drive
+                            regional sea level changes and extremes in the Southwest Pacific and along the
+                            New Zealand coast, including links to Antarctic and Southern Ocean variability.
+                        </p>
+                        <div class="card-meta">Methods: ocean reanalysis, altimetry, dynamical modelling, scenario analysis</div>
+                        <div class="card-footer">
+                            <a href="#">Key figures &amp; datasets</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-kicker">Data &amp; ML</div>
+                        <h3 class="card-title">Emulators for ocean-climate extremes</h3>
+                        <p class="card-body">
+                            Building fast, data-driven emulators of complex ocean model output to explore uncertainty
+                            and enable rapid scenario analysis of marine extremes and compound events, bridging
+                            high-end modelling and practical decision support.
+                        </p>
+                        <div class="card-meta">Tools: Python, xarray, ML frameworks, HPC and cloud workflows</div>
+                        <div class="card-footer">
+                            <a href="#">Code &amp; open resources</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <!-- Publications -->
         <section id="publications">
             <div class="shell">
@@ -5,83 +881,108 @@
                     <div class="section-kicker">Publications</div>
                     <h2 class="section-title">Selected peer-reviewed work</h2>
                     <p class="section-subtitle">
-                        A small selection of publications. For a complete and up-to-date list, see
-                        <a href="https://scholar.google.com/citations?user=96hkUEwAAAAJ" target="_blank" rel="noopener">
-                            Google Scholar
-                        </a>
-                        or my
-                        <a href="https://erik-behrens.de/?page_id=30" target="_blank" rel="noopener">
-                            publications page
-                        </a>.
+                        Replace or expand with your actual publication list and links (e.g. to Google Scholar or ORCID).
                     </p>
                 </div>
 
                 <ul class="pub-list">
                     <li class="pub-item">
                         <div class="pub-title">
-                            Cornelissen, L., <strong>Behrens, E.</strong>, Fernandez, D., Sutton, P. J. H., et al. (2025).
-                            <em>Increased stratification intensifies surface marine heatwaves in a warming ocean.</em>
+                            Behrens, E., et al. (20XX).
+                            <em>Title of a key paper on Southern Ocean / NZ regional circulation or marine heatwaves.</em>
                         </div>
                         <div class="pub-meta">
-                            Earth Systems and Environment (in press). 
-                            <a href="https://www.publish.csiro.au/es/ES23030" target="_blank" rel="noopener">Article</a>
+                            Journal Name, Volume(Issue), pages. <a href="#">DOI / Link</a>
                         </div>
                     </li>
-
                     <li class="pub-item">
                         <div class="pub-title">
-                            Cook, K. M., Dunn, M. R., <strong>Behrens, E.</strong>, Haddon, M., et al. (2024).
-                            <em>The impacts of marine heatwaves on ecosystems and fisheries in Aotearoa New Zealand.</em>
+                            Behrens, E., et al. (20XX).
+                            <em>Another representative publication related to sea level, extremes, or modelling.</em>
                         </div>
                         <div class="pub-meta">
-                            New Zealand Journal of Marine and Freshwater Research.
-                            <a href="https://ourarchive.otago.ac.nz/esploro/outputs/journalArticle/The-impacts-of-marine-heatwaves-on/9926667040101891" target="_blank" rel="noopener">Article</a>
+                            Journal Name. <a href="#">DOI / Link</a>
                         </div>
                     </li>
-
                     <li class="pub-item">
                         <div class="pub-title">
-                            Lewis, C. B., Corran, R., Mikaloff-Fletcher, S. E., <strong>Behrens, E.</strong>, et al. (2025).
-                            <em>Southern Hemisphere tree rings as proxies to reconstruct Southern Ocean upwelling.</em>
+                            Behrens, E., and collaborators (20XX).
+                            <em>Paper or report highlighting collaboration with NZ stakeholders / agencies.</em>
                         </div>
                         <div class="pub-meta">
-                            Biogeosciences, 22, 4187–4201.
-                            <a href="https://doi.org/10.5194/bg-22-4187-2025" target="_blank" rel="noopener">DOI</a>
-                        </div>
-                    </li>
-
-                    <li class="pub-item">
-                        <div class="pub-title">
-                            <strong>Behrens, E.</strong>, Fernandez, D., Sutton, P. J. H., et al. (2019).
-                            <em>Meridional oceanic heat transport influences marine heatwaves in the Tasman Sea on interannual to decadal timescales.</em>
-                        </div>
-                        <div class="pub-meta">
-                            Frontiers in Marine Science, 6:228.
-                            <a href="https://deepsouthchallenge.co.nz/wp-content/uploads/2020/11/Meridional-Oceanic-Heat-Transport-Influences-Marine-Heatwaves-in-the-Tasman-Sea-on-Interannual-to-Decadal-Timescales.pdf" target="_blank" rel="noopener">PDF</a>
-                        </div>
-                    </li>
-
-                    <li class="pub-item">
-                        <div class="pub-title">
-                            Law, C. S., <strong>Behrens, E.</strong>, Chiswell, S. M., et al. (2018).
-                            <em>Climate change projections for the surface ocean around New Zealand.</em>
-                        </div>
-                        <div class="pub-meta">
-                            New Zealand Journal of Marine and Freshwater Research.
-                            <a href="https://www.tandfonline.com/doi/10.1080/00288330.2017.1390772" target="_blank" rel="noopener">DOI</a>
-                        </div>
-                    </li>
-
-                    <li class="pub-item">
-                        <div class="pub-title">
-                            <strong>Behrens, E.</strong>, Rickard, G., Morgenstern, O., Martin, T., Osprey, A., &amp; Joshi, M. (2016).
-                            <em>Southern Ocean deep convection in global climate models: A driver for variability of subpolar gyres and Drake Passage transport on decadal timescales.</em>
-                        </div>
-                        <div class="pub-meta">
-                            Journal of Geophysical Research: Oceans, 121.
-                            <a href="https://doi.org/10.1002/2015JC011286" target="_blank" rel="noopener">DOI</a>
+                            Report / Journal / Conference. <a href="#">DOI / Link</a>
                         </div>
                     </li>
                 </ul>
             </div>
         </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <div class="shell">
+                <div class="section-heading">
+                    <div class="section-kicker">Contact</div>
+                    <h2 class="section-title">Get in touch</h2>
+                    <p class="section-subtitle">
+                        For collaborations, student supervision, talks, or applied projects, feel free to contact me.
+                    </p>
+                </div>
+
+                <div class="contact-card">
+                    <div>
+                        <p>
+                            I am interested in collaborations spanning physical oceanography, climate extremes,
+                            and applications in coastal risk, marine sectors, and adaptation planning –
+                            particularly in and around Aotearoa New Zealand and the Southern Ocean.
+                        </p>
+                        <p style="margin-top:0.8rem;">
+                            A short email outlining your background, interests, and what you would like to work on
+                            is a good starting point for discussion.
+                        </p>
+                    </div>
+                    <div class="contact-details">
+                        <div class="contact-row">
+                            <span class="label">Email</span>
+                            <a href="mailto:your.email@esnz.org">your.email@esnz.org</a>
+                            <!-- replace with your actual address -->
+                        </div>
+                        <div class="contact-row">
+                            <span class="label">Institution</span>
+                            <span>Earth Sciences New Zealand (ESNZ), Wellington</span>
+                        </div>
+                        <div class="contact-row">
+                            <span class="label">Scholar</span>
+                            <a href="#">Google Scholar</a>
+                        </div>
+                        <div class="contact-row">
+                            <span class="label">GitHub</span>
+                            <a href="https://github.com/erikbehrens" target="_blank" rel="noopener">github.com/erikbehrens</a>
+                        </div>
+                        <div class="contact-row">
+                            <span class="label">CV</span>
+                            <a href="#">Download CV (PDF)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div>© <span id="year"></span> Dr Erik Behrens. All rights reserved.</div>
+            <div class="footer-links">
+                <a href="#top">Back to top ↑</a>
+                <a href="#">ORCID</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
