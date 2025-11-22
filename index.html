@@ -656,6 +656,27 @@
             width: 100%;
             height: 100%;
         }
+        .profile-pic-wrapper {
+            width: 140px;
+            height: 140px;
+            border-radius: 999px;
+            padding: 3px;
+            background: radial-gradient(circle at 30% 0, #9ae6ff, #0a8fb7 50%, #02111b 100%);
+            box-shadow: 0 0 25px rgba(99, 179, 237, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.2rem;
+        }
+        
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            border-radius: 999px;
+            object-fit: cover;
+            display: block;
+        }
+
     </style>
 </head>
 <body>
@@ -688,6 +709,9 @@
             <div class="shell">
                 <div class="hero-grid">
                     <div>
+                        <div class="profile-pic-wrapper">
+                        <img src="erik_behrens_webpage.jpg" alt="Dr Erik Behrens" class="profile-pic">
+                        </div>
                         <div class="hero-badge">
                             <span class="hero-badge-dot"></span>
                             <span>Physical Oceanography · Aotearoa New Zealand</span>
