@@ -356,14 +356,15 @@
             color: #cbd5f5;
         }
 
-        .mini-graph {
-            position: relative;
-            height: 80px;
-            border-radius: 14px;
-            background: radial-gradient(circle at top, rgba(144, 205, 244, 0.25), rgba(3, 16, 33, 0.95));
-            border: 1px solid rgba(144, 205, 244, 0.4);
-            overflow: hidden;
-        }
+.mini-graph {
+    position: relative;
+    height: 140px; /* increased from 80px */
+    border-radius: 14px;
+    background: radial-gradient(circle at top, rgba(144, 205, 244, 0.25), rgba(3, 16, 33, 0.95));
+    border: 1px solid rgba(144, 205, 244, 0.4);
+    overflow: hidden;
+}
+
 
         .mini-graph-grid {
             position: absolute;
@@ -713,16 +714,17 @@
             object-fit: cover;
             display: block;
         }
-        .word-cloud {
-        position: absolute;
-        inset: 0.5rem 0.7rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.3rem 0.4rem;
-        align-content: flex-start;
-        font-size: 0.75rem;
-        pointer-events: none;
-        }
+.word-cloud {
+    position: absolute;
+    inset: 0.5rem 0.7rem 0.9rem 0.7rem; /* bottom inset slightly larger */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 0.4rem;
+    align-content: flex-start;
+    font-size: 0.75rem;
+    pointer-events: none;
+}
+
         
         .word-cloud span {
             padding: 0.12rem 0.5rem;
