@@ -578,6 +578,42 @@
             color: var(--text-muted);
         }
 
+        /* Publication metrics (h-index box) */
+        .pub-metrics {
+            margin-bottom: 1.4rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .pub-metric-card {
+            min-width: 220px;
+            padding: 0.75rem 0.9rem;
+            border-radius: 14px;
+            background: radial-gradient(circle at top left, rgba(79, 209, 197, 0.18), rgba(3, 24, 48, 0.98));
+            border: 1px solid rgba(148, 210, 255, 0.6);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .pub-metric-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+        }
+
+        .pub-metric-value {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.1rem;
+        }
+
+        .pub-metric-caption {
+            font-size: 0.8rem;
+            color: #e2e8f0;
+        }
+
         .contact-card {
             background: var(--card-bg);
             border-radius: var(--radius-xxl);
@@ -656,6 +692,7 @@
             width: 100%;
             height: 100%;
         }
+
         .profile-pic-wrapper {
             width: 140px;
             height: 140px;
@@ -668,7 +705,7 @@
             justify-content: center;
             margin-bottom: 1.2rem;
         }
-        
+
         .profile-pic {
             width: 100%;
             height: 100%;
@@ -710,7 +747,7 @@
                 <div class="hero-grid">
                     <div>
                         <div class="profile-pic-wrapper">
-                        <img src="erik_behrens_webpage.jpg" alt="Dr Erik Behrens" class="profile-pic">
+                            <img src="erik_behrens_webpage.jpg" alt="Dr Erik Behrens" class="profile-pic">
                         </div>
                         <div class="hero-badge">
                             <span class="hero-badge-dot"></span>
@@ -767,8 +804,8 @@
                                 <div class="mini-graph-grid"></div>
                                 <div class="mini-wave"></div>
                                 <div class="mini-graph-footer">
-                                    <span>Simulated anomalies</span>
-                                    <span>Temperature · Sea level · Circulation</span>
+                                    <span>Global SST increase</span>
+                                    <span>Since 1982 (illustrative)</span>
                                 </div>
                             </div>
                         </div>
@@ -797,36 +834,36 @@
                 <div class="about-grid">
                     <div class="about-card">
                         <div class="about-text">
-    <p>
-        I am a <strong>physical oceanographer</strong> at
-        <strong>Earth Sciences New Zealand (ESNZ)</strong>, based in Wellington.
-        My work focuses on how the <strong>Southern Ocean and Antarctic margins</strong>
-        interact with the rest of the climate system through large-scale circulation,
-        water-mass formation, and the <strong>global overturning circulation</strong>.
-    </p>
-    <p>
-        I use a combination of <strong>global and regional ocean models</strong>,
-        <strong>observational datasets</strong>, and increasingly <strong>machine learning</strong>
-        to understand drivers, mechanisms, and predictability of marine extremes,
-        including <strong>marine heatwaves</strong> and <strong>sea-level change</strong>,
-        with a particular focus on Aotearoa New Zealand and the wider Southwest Pacific.
-    </p>
-</div>
+                            <p>
+                                I am a <strong>physical oceanographer</strong> at
+                                <strong>Earth Sciences New Zealand (ESNZ)</strong>, based in Wellington.
+                                My work focuses on how the <strong>Southern Ocean and Antarctic margins</strong>
+                                interact with the rest of the climate system through large-scale circulation,
+                                water-mass formation, and the <strong>global overturning circulation</strong>.
+                            </p>
+                            <p>
+                                I use a combination of <strong>global and regional ocean models</strong>,
+                                <strong>observational datasets</strong>, and increasingly <strong>machine learning</strong>
+                                to understand drivers, mechanisms, and predictability of marine extremes,
+                                including <strong>marine heatwaves</strong> and <strong>sea-level change</strong>,
+                                with a particular focus on Aotearoa New Zealand and the wider Southwest Pacific.
+                            </p>
+                        </div>
 
                         <ul class="about-list">
                             <li>Current role: Physical Oceanographer, Earth Sciences New Zealand (ESNZ)</li>
                             <li>Location: Pōneke / Wellington, Aotearoa New Zealand</li>
-                            <li>PhD: Physical Oceanography / Climate (details here if you like)</li>
+                            <li>PhD: Physical Oceanography / Climate Science</li>
                         </ul>
-<div class="about-tags">
-    <span class="tag">Physical oceanography</span>
-    <span class="tag">Southern Ocean & Antarctic margins</span>
-    <span class="tag">Global overturning circulation</span>
-    <span class="tag">Marine heatwaves</span>
-    <span class="tag">Sea level & extremes</span>
-    <span class="tag">Numerical modelling</span>
-    <span class="tag">Data science & ML</span>
-</div>
+                        <div class="about-tags">
+                            <span class="tag">Physical oceanography</span>
+                            <span class="tag">Southern Ocean & Antarctic margins</span>
+                            <span class="tag">Global overturning circulation</span>
+                            <span class="tag">Marine heatwaves</span>
+                            <span class="tag">Sea level & extremes</span>
+                            <span class="tag">Numerical modelling</span>
+                            <span class="tag">Data science & ML</span>
+                        </div>
 
                     </div>
                     <div class="about-highlight">
@@ -834,14 +871,14 @@
                         <p>
                             Selected themes:
                         </p>
-    <ul class="about-list" style="margin-top:0.7rem;">
-    <li>Links between <strong>Southern Ocean dynamics</strong>, Antarctic ice-ocean interaction, and the <strong>global overturning circulation</strong></li>
-    <li>Drivers and predictability of <strong>marine heatwaves</strong> around New Zealand and the Tasman Sea</li>
-    <li>Regional <strong>sea-level change</strong>, extremes, and coastal risk in the Southwest Pacific</li>
-    <li>High-resolution <strong>ocean modelling</strong> for the NZ Exclusive Economic Zone and Antarctic gateways</li>
-    <li>Coupling process-based models with <strong>data-driven emulators</strong> for rapid scenario exploration</li>
-    <li>Co-design of tools with stakeholders across science, policy, and marine industries</li>
-</ul>
+                        <ul class="about-list" style="margin-top:0.7rem;">
+                            <li>Links between <strong>Southern Ocean dynamics</strong>, Antarctic ice-ocean interaction, and the <strong>global overturning circulation</strong></li>
+                            <li>Drivers and predictability of <strong>marine heatwaves</strong> around New Zealand and the Tasman Sea</li>
+                            <li>Regional <strong>sea-level change</strong>, extremes, and coastal risk in the Southwest Pacific</li>
+                            <li>High-resolution <strong>ocean modelling</strong> for the NZ Exclusive Economic Zone and Antarctic gateways</li>
+                            <li>Coupling process-based models with <strong>data-driven emulators</strong> for rapid scenario exploration</li>
+                            <li>Co-design of tools with stakeholders across science, policy, and marine industries</li>
+                        </ul>
 
                     </div>
                 </div>
@@ -863,11 +900,11 @@
                     <article class="card">
                         <div class="card-kicker">Marine heatwaves</div>
                         <h3 class="card-title">Forecasting coastal marine heatwave risk</h3>
-     <p class="card-body">
-    Developing high-resolution forecasts and early-warning indicators for marine heatwaves around
-    Aotearoa New Zealand and the Tasman Sea, integrating regional ocean models, reanalysis products,
-    and machine-learning based prediction systems co-designed with end users.
-</p>
+                        <p class="card-body">
+                            Developing high-resolution forecasts and early-warning indicators for marine heatwaves around
+                            Aotearoa New Zealand and the Tasman Sea, integrating regional ocean models, reanalysis products,
+                            and machine-learning based prediction systems co-designed with end users.
+                        </p>
 
                         <div class="card-meta">Keywords: seasonal prediction, coastal impacts, aquaculture & fisheries</div>
                         <div class="card-footer">
@@ -876,192 +913,219 @@
                     </article>
 
                     <article class="card">
-<div class="card-kicker">Sea level &amp; circulation</div>
-<h3 class="card-title">Southern Ocean dynamics and global overturning</h3>
-<p class="card-body">
-    Quantifying how Southern Ocean winds, eddies, and deep convection shape the
-    <strong>global overturning circulation</strong> and influence regional sea-level
-    change and extremes in the Southwest Pacific and along the New Zealand coast,
-    including teleconnections to Antarctic ice-sheet change.
-</p>
-<div class="card-meta">Methods: global & regional ocean models, reanalysis, altimetry, process-based experiments</div>
-<div class="card-footer">
-    <a href="#">Key figures &amp; datasets</a>
-</div>
+                        <div class="card-kicker">Sea level &amp; circulation</div>
+                        <h3 class="card-title">Southern Ocean dynamics and global overturning</h3>
+                        <p class="card-body">
+                            Quantifying how Southern Ocean winds, eddies, and deep convection shape the
+                            <strong>global overturning circulation</strong> and influence regional sea-level
+                            change and extremes in the Southwest Pacific and along the New Zealand coast,
+                            including teleconnections to Antarctic ice-sheet change.
+                        </p>
+                        <div class="card-meta">Methods: global & regional ocean models, reanalysis, altimetry, process-based experiments</div>
+                        <div class="card-footer">
+                            <a href="#">Key figures &amp; datasets</a>
+                        </div>
 
                     </article>
 
                     <article class="card">
-   <div class="card-kicker">Data &amp; ML</div>
-<h3 class="card-title">Emulators for ocean-climate extremes</h3>
-<p class="card-body">
-    Building fast, data-driven emulators of complex ocean model output – including Southern Ocean
-    and overturning circulation metrics – to explore uncertainty and enable rapid scenario analysis
-    of marine extremes and compound events, bridging high-end modelling and practical decision support.
-</p>
-<div class="card-meta">Tools: Python, xarray, ML frameworks, HPC and cloud workflows</div>
-<div class="card-footer">
-    <a href="#">Code &amp; open resources</a>
-</div>
+                        <div class="card-kicker">Data &amp; ML</div>
+                        <h3 class="card-title">Emulators for ocean-climate extremes</h3>
+                        <p class="card-body">
+                            Building fast, data-driven emulators of complex ocean model output – including Southern Ocean
+                            and overturning circulation metrics – to explore uncertainty and enable rapid scenario analysis
+                            of marine extremes and compound events, bridging high-end modelling and practical decision support.
+                        </p>
+                        <div class="card-meta">Tools: Python, xarray, ML frameworks, HPC and cloud workflows</div>
+                        <div class="card-footer">
+                            <a href="#">Code &amp; open resources</a>
+                        </div>
+                    </article>
 
+                    <!-- New internal waves / i-MIX card -->
+                    <article class="card">
+                        <div class="card-kicker">Internal waves &amp; mixing</div>
+                        <h3 class="card-title">Internal tides and mixing over submarine ridges</h3>
+                        <p class="card-body">
+                            Investigating how internal tides and internal waves generated by interaction of barotropic tides
+                            with rough topography drive enhanced mixing, modify stratification, and influence circulation
+                            pathways in the New Zealand region, including work within NIWA’s
+                            <strong>i-MIX (Internal Mixing)</strong> project.
+                        </p>
+                        <div class="card-meta">Focus: internal tides, small-scale mixing, energy pathways, implications for ecosystems</div>
+                        <div class="card-footer">
+                            <a href="https://niwa.co.nz/oceans/i-mix-project" target="_blank" rel="noopener">
+                                NIWA i-MIX project ↗
+                            </a>
+                        </div>
                     </article>
                 </div>
             </div>
         </section>
 
-       <!-- Publications -->
-<section id="publications">
-  <div class="shell">
-    <div class="section-heading">
-      <div class="section-kicker">Publications</div>
-      <h2 class="section-title">Selected publications</h2>
-      <p class="section-subtitle">
-        Recent work related to marine heatwaves, climate extremes, Southern Ocean dynamics and the New Zealand region.
-        Citation badges are powered by
-        <a href="https://badge.dimensions.ai" target="_blank" rel="noopener">Dimensions</a>.
-      </p>
-    </div>
+        <!-- Publications -->
+        <section id="publications">
+            <div class="shell">
+                <div class="section-heading">
+                    <div class="section-kicker">Publications</div>
+                    <h2 class="section-title">Selected publications</h2>
+                    <p class="section-subtitle">
+                        Recent work related to marine heatwaves, climate extremes, Southern Ocean dynamics and the New Zealand region.
+                        Citation badges are powered by
+                        <a href="https://badge.dimensions.ai" target="_blank" rel="noopener">Dimensions</a>.
+                    </p>
+                </div>
 
-    <ul class="pub-list">
+                <!-- h-index box -->
+                <div class="pub-metrics">
+                    <div class="pub-metric-card">
+                        <div class="pub-metric-label">Scholar metrics</div>
+                        <div class="pub-metric-value">h-index: <span>30</span></div>
+                        <div class="pub-metric-caption">
+                            Google Scholar profile (update value from your current profile).
+                        </div>
+                    </div>
+                </div>
 
-      <!-- Impacts of MHWs on ecosystems & fisheries -->
-      <li class="pub-item">
-        <div class="pub-title">
-          Cook, K. M., Dunn, M. R., <strong>Behrens, E.</strong>, Pinkerton, M. H., Law, C. S., Cummings, V. J. (2025).
-          <em>The impacts of marine heatwaves on ecosystems and fisheries in Aotearoa New Zealand.</em>
-        </div>
-        <div class="pub-meta">
-          New Zealand Journal of Marine and Freshwater Research, 59(5), 1530–1560.
-          <a href="https://doi.org/10.1080/00288330.2024.2436661" target="_blank" rel="noopener">DOI</a><br>
-          <span
-            class="__dimensions_badge_embed__"
-            data-doi="10.1080/00288330.2024.2436661"
-            data-style="large_rectangle"
-            data-hide-zero-citations="true"
-            data-legend="hover-right">
-          </span>
-        </div>
-      </li>
+                <ul class="pub-list">
 
-      <!-- Lifting the lid on Marine Heatwaves -->
-      <li class="pub-item">
-        <div class="pub-title">
-          Malan, N., Gupta, A. S., Schaeffer, A., Zhang, S., Doblin, M. A., Pilo, G. S., Kiss, A. E., … 
-          <strong>Behrens, E.</strong>, …, Spillman, C. M. (2025).
-          <em>Lifting the lid on Marine Heatwaves.</em>
-        </div>
-        <div class="pub-meta">
-          Progress in Oceanography, 239, 103539.
-          <a href="https://doi.org/10.1016/j.pocean.2025.103539" target="_blank" rel="noopener">DOI</a><br>
-          <span
-            class="__dimensions_badge_embed__"
-            data-doi="10.1016/j.pocean.2025.103539"
-            data-style="large_rectangle"
-            data-hide-zero-citations="true"
-            data-legend="hover-right">
-          </span>
-        </div>
-      </li>
+                    <!-- Impacts of MHWs on ecosystems & fisheries -->
+                    <li class="pub-item">
+                        <div class="pub-title">
+                            Cook, K. M., Dunn, M. R., <strong>Behrens, E.</strong>, Pinkerton, M. H., Law, C. S., Cummings, V. J. (2025).
+                            <em>The impacts of marine heatwaves on ecosystems and fisheries in Aotearoa New Zealand.</em>
+                        </div>
+                        <div class="pub-meta">
+                            New Zealand Journal of Marine and Freshwater Research, 59(5), 1530–1560.
+                            <a href="https://doi.org/10.1080/00288330.2024.2436661" target="_blank" rel="noopener">DOI</a><br>
+                            <span
+                                class="__dimensions_badge_embed__"
+                                data-doi="10.1080/00288330.2024.2436661"
+                                data-style="large_rectangle"
+                                data-hide-zero-citations="true"
+                                data-legend="hover-right">
+                            </span>
+                        </div>
+                    </li>
 
-      <!-- What makes a MHW forecast useable, useful and used? -->
-      <li class="pub-item">
-        <div class="pub-title">
-          Spillman, C. M., Hobday, A. J., <strong>Behrens, E.</strong>, Feng, M., Capotondi, A., Cravatte, S., Gupta, A. S., et al. (2025).
-          <em>What makes a marine heatwave forecast useable, useful and used?</em>
-        </div>
-        <div class="pub-meta">
-          Progress in Oceanography, 234, 103464.
-          <a href="https://doi.org/10.1016/j.pocean.2025.103464" target="_blank" rel="noopener">DOI</a><br>
-          <span
-            class="__dimensions_badge_embed__"
-            data-doi="10.1016/j.pocean.2025.103464"
-            data-style="large_rectangle"
-            data-hide-zero-citations="true"
-            data-legend="hover-right">
-          </span>
-        </div>
-      </li>
+                    <!-- Lifting the lid on Marine Heatwaves -->
+                    <li class="pub-item">
+                        <div class="pub-title">
+                            Malan, N., Gupta, A. S., Schaeffer, A., Zhang, S., Doblin, M. A., Pilo, G. S., Kiss, A. E., …
+                            <strong>Behrens, E.</strong>, …, Spillman, C. M. (2025).
+                            <em>Lifting the lid on Marine Heatwaves.</em>
+                        </div>
+                        <div class="pub-meta">
+                            Progress in Oceanography, 239, 103539.
+                            <a href="https://doi.org/10.1016/j.pocean.2025.103539" target="_blank" rel="noopener">DOI</a><br>
+                            <span
+                                class="__dimensions_badge_embed__"
+                                data-doi="10.1016/j.pocean.2025.103539"
+                                data-style="large_rectangle"
+                                data-hide-zero-citations="true"
+                                data-legend="hover-right">
+                            </span>
+                        </div>
+                    </li>
 
-      <!-- Global & regional drivers for 2023–2024 extremes -->
-      <li class="pub-item">
-        <div class="pub-title">
-          Minobe, S., <strong>Behrens, E.</strong>, Findell, K. L., Loeb, N. G., Meyssignac, B., Sutton, R., et al. (2025).
-          <em>Global and regional drivers for exceptional climate extremes in 2023–2024: beyond the new normal.</em>
-        </div>
-        <div class="pub-meta">
-          npj Climate and Atmospheric Science, 8(1), 138.
-          <a href="https://doi.org/10.1038/s41612-025-00996-z" target="_blank" rel="noopener">DOI</a><br>
-          <span
-            class="__dimensions_badge_embed__"
-            data-doi="10.1038/s41612-025-00996-z"
-            data-style="large_rectangle"
-            data-hide-zero-citations="true"
-            data-legend="hover-right">
-          </span>
-        </div>
-      </li>
+                    <!-- What makes a MHW forecast useable, useful and used? -->
+                    <li class="pub-item">
+                        <div class="pub-title">
+                            Spillman, C. M., Hobday, A. J., <strong>Behrens, E.</strong>, Feng, M., Capotondi, A., Cravatte, S., Gupta, A. S., et al. (2025).
+                            <em>What makes a marine heatwave forecast useable, useful and used?</em>
+                        </div>
+                        <div class="pub-meta">
+                            Progress in Oceanography, 234, 103464.
+                            <a href="https://doi.org/10.1016/j.pocean.2025.103464" target="_blank" rel="noopener">DOI</a><br>
+                            <span
+                                class="__dimensions_badge_embed__"
+                                data-doi="10.1016/j.pocean.2025.103464"
+                                data-style="large_rectangle"
+                                data-hide-zero-citations="true"
+                                data-legend="hover-right">
+                            </span>
+                        </div>
+                    </li>
 
-      <!-- NZ marine carbon cycle review -->
-      <li class="pub-item">
-        <div class="pub-title">
-          Nodder, S. D., Law, C. S., <strong>Behrens, E.</strong>, Bury, S. J., Cristi, A., Collins, C., Currie, K. I., et al. (2025).
-          <em>Aotearoa New Zealand’s marine carbon cycle in a changing climate – Current understanding and future directions.</em>
-        </div>
-        <div class="pub-meta">
-          New Zealand Journal of Marine and Freshwater Research, 59(5), 913–956.
-          <a href="https://doi.org/10.1080/00288330.2025.2461289" target="_blank" rel="noopener">DOI</a><br>
-          <span
-            class="__dimensions_badge_embed__"
-            data-doi="10.1080/00288330.2025.2461289"
-            data-style="large_rectangle"
-            data-hide-zero-citations="true"
-            data-legend="hover-right">
-          </span>
-        </div>
-      </li>
+                    <!-- Global & regional drivers for 2023–2024 extremes -->
+                    <li class="pub-item">
+                        <div class="pub-title">
+                            Minobe, S., <strong>Behrens, E.</strong>, Findell, K. L., Loeb, N. G., Meyssignac, B., Sutton, R., et al. (2025).
+                            <em>Global and regional drivers for exceptional climate extremes in 2023–2024: beyond the new normal.</em>
+                        </div>
+                        <div class="pub-meta">
+                            npj Climate and Atmospheric Science, 8(1), 138.
+                            <a href="https://doi.org/10.1038/s41612-025-00996-z" target="_blank" rel="noopener">DOI</a><br>
+                            <span
+                                class="__dimensions_badge_embed__"
+                                data-doi="10.1038/s41612-025-00996-z"
+                                data-style="large_rectangle"
+                                data-hide-zero-citations="true"
+                                data-legend="hover-right">
+                            </span>
+                        </div>
+                    </li>
 
-      <!-- Tropical teleconnections / Antarctic toothfish recruitment -->
-      <li class="pub-item">
-        <div class="pub-title">
-          <strong>Behrens, E.</strong>, Grüss, A., Pinkerton, M., Parker, S., Rickard, G., Stevens, C. (2024).
-          <em>Tropical teleconnections through the Amundsen Sea Low impact Antarctic toothfish recruitment within the Ross Gyre.</em>
-        </div>
-        <div class="pub-meta">
-          Scientific Reports, 14(1), 26715.
-          <a href="https://doi.org/10.1038/s41598-024-78248-y" target="_blank" rel="noopener">DOI</a><br>
-          <span
-            class="__dimensions_badge_embed__"
-            data-doi="10.1038/s41598-024-78248-y"
-            data-style="large_rectangle"
-            data-hide-zero-citations="true"
-            data-legend="hover-right">
-          </span>
-        </div>
-      </li>
+                    <!-- NZ marine carbon cycle review -->
+                    <li class="pub-item">
+                        <div class="pub-title">
+                            Nodder, S. D., Law, C. S., <strong>Behrens, E.</strong>, Bury, S. J., Cristi, A., Collins, C., Currie, K. I., et al. (2025).
+                            <em>Aotearoa New Zealand’s marine carbon cycle in a changing climate – Current understanding and future directions.</em>
+                        </div>
+                        <div class="pub-meta">
+                            New Zealand Journal of Marine and Freshwater Research, 59(5), 913–956.
+                            <a href="https://doi.org/10.1080/00288330.2025.2461289" target="_blank" rel="noopener">DOI</a><br>
+                            <span
+                                class="__dimensions_badge_embed__"
+                                data-doi="10.1080/00288330.2025.2461289"
+                                data-style="large_rectangle"
+                                data-hide-zero-citations="true"
+                                data-legend="hover-right">
+                            </span>
+                        </div>
+                    </li>
 
-      <!-- Climate extremes in the NZ region -->
-      <li class="pub-item">
-        <div class="pub-title">
-          Salinger, M. J., Trenberth, K. E., Diamond, H. J., <strong>Behrens, E.</strong>, Fitzharris, B. B., Herold, N., Smith, R. O., Sutton, P. J., Trought, M. C. T. (2024).
-          <em>Climate extremes in the New Zealand region: mechanisms, impacts and attribution.</em>
-        </div>
-        <div class="pub-meta">
-          International Journal of Climatology.
-          <a href="https://doi.org/10.1002/joc.8667" target="_blank" rel="noopener">DOI</a><br>
-          <span
-            class="__dimensions_badge_embed__"
-            data-doi="10.1002/joc.8667"
-            data-style="large_rectangle"
-            data-hide-zero-citations="true"
-            data-legend="hover-right">
-          </span>
-        </div>
-      </li>
+                    <!-- Tropical teleconnections / Antarctic toothfish recruitment -->
+                    <li class="pub-item">
+                        <div class="pub-title">
+                            <strong>Behrens, E.</strong>, Grüss, A., Pinkerton, M., Parker, S., Rickard, G., Stevens, C. (2024).
+                            <em>Tropical teleconnections through the Amundsen Sea Low impact Antarctic toothfish recruitment within the Ross Gyre.</em>
+                        </div>
+                        <div class="pub-meta">
+                            Scientific Reports, 14(1), 26715.
+                            <a href="https://doi.org/10.1038/s41598-024-78248-y" target="_blank" rel="noopener">DOI</a><br>
+                            <span
+                                class="__dimensions_badge_embed__"
+                                data-doi="10.1038/s41598-024-78248-y"
+                                data-style="large_rectangle"
+                                data-hide-zero-citations="true"
+                                data-legend="hover-right">
+                            </span>
+                        </div>
+                    </li>
 
-    </ul>
-  </div>
-</section>
+                    <!-- Climate extremes in the NZ region -->
+                    <li class="pub-item">
+                        <div class="pub-title">
+                            Salinger, M. J., Trenberth, K. E., Diamond, H. J., <strong>Behrens, E.</strong>, Fitzharris, B. B., Herold, N., Smith, R. O., Sutton, P. J., Trought, M. C. T. (2024).
+                            <em>Climate extremes in the New Zealand region: mechanisms, impacts and attribution.</em>
+                        </div>
+                        <div class="pub-meta">
+                            International Journal of Climatology.
+                            <a href="https://doi.org/10.1002/joc.8667" target="_blank" rel="noopener">DOI</a><br>
+                            <span
+                                class="__dimensions_badge_embed__"
+                                data-doi="10.1002/joc.8667"
+                                data-style="large_rectangle"
+                                data-hide-zero-citations="true"
+                                data-legend="hover-right">
+                            </span>
+                        </div>
+                    </li>
 
+                </ul>
+            </div>
+        </section>
 
         <!-- Contact -->
         <section id="contact">
@@ -1090,7 +1154,6 @@
                         <div class="contact-row">
                             <span class="label">Email</span>
                             <a href="mailto:erik.behrens@niwa.co.nz">erik.behrens@niwa.co.nz</a>
-                            <!-- replace with your actual address -->
                         </div>
                         <div class="contact-row">
                             <span class="label">Institution</span>
@@ -1130,7 +1193,7 @@
 <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 </script>
-    <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
 
 </body>
 </html>
