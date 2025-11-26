@@ -287,9 +287,16 @@
             font-size: 0.78rem;
         }
 
-        .hero-visual {
-            position: relative;
-        }
+.hero-visual {
+    position: relative;
+}
+
+/* Push the Ocean at a Glance box down ~1.5cm on larger screens */
+@media (min-width: 860px) {
+    .hero-visual {
+        margin-top: 1.5cm;
+    }
+}
 
         .hero-card {
             border-radius: var(--radius-xxl);
